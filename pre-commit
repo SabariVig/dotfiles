@@ -1,0 +1,4 @@
+#!/bin/bash
+
+ln /home/hawk/.config/coc/ultisnips/* /home/hawk/.config/snippets
+ln  /home/hawk/.config/coc/extensions/package.json /home/hawk/.config/coc-packages.json

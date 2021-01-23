@@ -1,0 +1,14 @@
+add_newline = false
+
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[➜](bold red)"
+
+[git_status]
+conflicted_count.enabled = true
+stashed_count.enabled = true
+modified_count.enabled = true
+staged_count.enabled = true 
+
+[package]
+disabled = true

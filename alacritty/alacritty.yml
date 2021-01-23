@@ -1,0 +1,31 @@
+colors:
+  primary:
+    background: '0x222433'
+    foreground: '0x9ea3c0'
+
+  normal:
+    black: '0x000000'
+    red: '0xff6e67'
+    green: '0x7cbe8c'
+    yellow: '0xf4f99d'
+    blue: '0x929be5'
+    magenta: '0xff92d0'
+    cyan: '0x2aacbd'
+    white: '0xc7c7c7'
+
+  bright:
+    black: '0x5d6872'
+    red: '0xd5635e'
+    green: '0x6ca97a'
+    yellow: '0xb3c580'
+    blue: '0x838cd6'
+    magenta: '0xff92d0'
+    cyan: '0x2aacbd'
+    white: '0xffffff'
+
+font:
+  size: 13
+  normal:
+    family: 'monospace'
+  italic:
+    family: 'monospace'

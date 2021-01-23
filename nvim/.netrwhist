@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/home/hawk/.config/snippets'
+let g:netrw_dirhist_4='/home/hawk/Code/CloudCli/Borg'
+let g:netrw_dirhist_3='/home/hawk/Code/CloudCli/Foxie/pages/login'
+let g:netrw_dirhist_2='/home/hawk/Code/CloudTerm/Foxie/lib/Components/Nav'
+let g:netrw_dirhist_1='/home/hawk/Downloads/project/frontend/src'
