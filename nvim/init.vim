@@ -179,3 +179,5 @@ let g:lightline = {
       \   'figitive' : 'LightlineFugitive',
       \ },
       \ }
+
+set runtimepath^=~/.vim/bundle/ctrlp.vim

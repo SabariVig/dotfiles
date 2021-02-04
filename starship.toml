@@ -10,5 +10,8 @@ stashed_count.enabled = true
 modified_count.enabled = true
 staged_count.enabled = true 
 
+[aws]
+disabled = true
+
 [package]
 disabled = true
