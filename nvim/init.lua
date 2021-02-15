@@ -26,14 +26,16 @@ require('config.colorscheme')
 
 
 -- CONFIG 
-    -- StatusLine
-    require('config.statusline')
+-- StatusLine
+require('config.statusline')
+require( 'config.fugitive' )
+require('config.treesitter')
+require('config.telescope')
 
-    -- Nvim Tree
-    require('config.ntree')
+-- Nvim Tree
+require('config.ntree')
 
-    -- LSP
-    require('lsp')
-    require('config.completion')
-    require('config.treesitter')
+-- LSP
+require('lsp')
+require('config.completion')
 

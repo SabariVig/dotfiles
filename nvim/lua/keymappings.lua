@@ -22,14 +22,20 @@ utils.map('n','X','D')
 utils.map('n','d','"_d')
 utils.map('v','d','"_d')
 
-utils.map('n','D','"_d')
-utils.map('v','D','"_d')
+utils.map('n','D','"_D')
+utils.map('v','D','"_D')
 
 utils.map('n','Y','y$')
 utils.map('v','Y','y$')
 
-
-
+-- Window Navigation
 utils.map('n','<Leader>y','<cmd>wincmd h<CR>')
 utils.map('n','<Leader>n','<cmd>wincmd j<CR>')
 utils.map('n','<Leader>o','<cmd>wincmd l<CR>')
+
+-- Terminal Navigation
+utils.map('n','<Leader>T','<cmd>terminal<CR>')
+
+-- Buffer Navigation
+utils.map('n','<Leader> ','<cmd>e #<CR>')
+

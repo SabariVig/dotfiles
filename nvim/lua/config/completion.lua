@@ -8,8 +8,10 @@ vim.g.completion_matching_strategy_list = {'exact', 'substring', 'fuzzy'}-- <Tab
 utils.map('i', '<S-Tab>', 'pumvisible() ? "\\<C-p>" : "\\<Tab>"', {expr = true})
 utils.map('i', '<Tab>', 'pumvisible() ? "\\<C-n>" : "\\<Tab>"', {expr = true})
 
-require'lspconfig'.gopls.setup{on_attach=require'completion'.on_attach}
+utils.map('i', '<C-space>', '<Plug>(completion_trigger)', { noremap = false , silent = true })
 
-require'lspconfig'.tsserver.setup{on_attach=require'completion'.on_attach}
+-- imap <silent> <c-p> <Plug>(completion_trigger)
 
-require'lspconfig'.rust_analyzer.setup{on_attach=require'completion'.on_attach}
+-- require'lspconfig'.gopls.setup{on_attach=require'completion'.on_attach}
+-- require'lspconfig'.tsserver.setup{on_attach=require'completion'.on_attach}
+-- require'lspconfig'.rust_analyzer.setup{on_attach=require'completion'.on_attach}
