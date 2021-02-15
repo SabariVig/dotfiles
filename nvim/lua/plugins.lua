@@ -4,8 +4,6 @@ return require('packer').startup(function()
   use {'wbthomason/packer.nvim', opt = true}
 
   -- Color scheme
-  use { 'skbolton/embark' }
-  use { 'arcticicestudio/nord-vim' }
   use { 'sainnhe/gruvbox-material' }
 
 

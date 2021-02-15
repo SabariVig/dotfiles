@@ -1,6 +1,6 @@
 local utils = require('utils')
 
--- utils.map('n','<Leader>e','<cmd>NvimTreeToggle<CR>')
+utils.map('n','<Leader>exp','<cmd>NvimTreeToggle<CR>')
 
 vim.g.nvim_tree_bindings = { ['edit_vsplit']= 'v'}
 vim.g.nvim_tree_bindings = {
