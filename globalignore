@@ -1,0 +1,8 @@
+*.db
+*.pdf
+*node_modules/
+*tmp/
+*temp/
+*ignore/
+*.log
+*.logs
