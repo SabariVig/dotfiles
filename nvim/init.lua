@@ -30,7 +30,7 @@ require('config.colorscheme')
 require('config.statusline')
 require( 'config.fugitive' )
 require('config.treesitter')
--- require('config.telescope')
+require('config.telescope')
 
 -- Nvim Tree
 require('config.ntree')

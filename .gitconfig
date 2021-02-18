@@ -1,0 +1,11 @@
+[user]
+	email = hey@lxz.io
+	name = SabariVig
+	signingKey = A968EFD4CE8B554BB4BC414CE62994FB8C000E20
+[push]
+	default = current
+[commit]
+	gpgSign = true
+[core]
+    editor = nvim
+	excludesFile = ~/.config/globalignore

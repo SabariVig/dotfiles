@@ -10,8 +10,8 @@ utils.map('i', '<Tab>', 'pumvisible() ? "\\<C-n>" : "\\<Tab>"', {expr = true})
 
 utils.map('i', '<C-space>', '<Plug>(completion_trigger)', { noremap = false , silent = true })
 
--- imap <silent> <c-p> <Plug>(completion_trigger)
+vim.g.completion_enable_snippet = 'UltiSnips'
 
 -- require'lspconfig'.gopls.setup{on_attach=require'completion'.on_attach}
--- require'lspconfig'.tsserver.setup{on_attach=require'completion'.on_attach}
 -- require'lspconfig'.rust_analyzer.setup{on_attach=require'completion'.on_attach}
+-- require'lspconfig'.tsserver.setup{on_attach=require'completion'.on_attach}

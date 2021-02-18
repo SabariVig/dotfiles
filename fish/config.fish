@@ -1,10 +1,13 @@
 starship init fish | source
-fish_vi_key_bindings
+
+export QT_QPA_PLATFORM=wayland 
 export GPG_TTY=(tty)
-export GO111MODULE=on
+
+fish_vi_key_bindings
 
 if status is-login
     if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
         exec sway
     end
 end
+

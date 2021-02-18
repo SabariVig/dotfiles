@@ -9,7 +9,7 @@
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 # Home row direction keys, like vim
-set $left h
+set $left z
 set $down j
 set $up k
 set $right l
@@ -18,12 +18,13 @@ set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu wofi --show=drun
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg  /srv/Pictures/peter-nguyen-OpiZAxueRUE-unsplash.jpg fill
+output * bg ~/.wallpaper/alexa-gaul-A8i3WFCBeo0-unsplash.jpg  fill
+
 #
 # Example configuration:
 #
@@ -35,10 +36,7 @@ output * bg  /srv/Pictures/peter-nguyen-OpiZAxueRUE-unsplash.jpg fill
 #
 # Example configuration:
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-#          before-sleep 'swaylock -f -c 000000'
+exec swayidle -w timeout 300 'systemctl suspend'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -69,7 +67,7 @@ output * bg  /srv/Pictures/peter-nguyen-OpiZAxueRUE-unsplash.jpg fill
     bindsym $mod+Shift+q kill
 
     # Start your launcher
-    #bindsym $mod+d exec $menu
+    bindsym $mod+d exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -140,7 +138,7 @@ output * bg  /srv/Pictures/peter-nguyen-OpiZAxueRUE-unsplash.jpg fill
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    bindsym $mod+Shift+v splith
+    bindsym $mod+h splith
     bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
@@ -173,7 +171,7 @@ output * bg  /srv/Pictures/peter-nguyen-OpiZAxueRUE-unsplash.jpg fill
     bindsym $mod+minus scratchpad show
 #
 # Resizing containers:
-#
+
 mode "resize" {
     # left will shrink the containers width
     # right will grow the containers width
@@ -196,49 +194,56 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-#
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
+# Enable Numloc On Boot
+input * xkb_numlock enable
 
-input "type:keyboard" {
-    xkb_layout us
-    xkb_variant workman 
-    xkb_options caps:escape
-}
+# Nord Color Scheme 
+client.focused          #4C566A #434C5E #FFFFFF #5E81AC   #5E81AC
+client.focused_inactive #333333 #2E3440 #FFFFFF #484E50   #5F676A
+client.unfocused        #333333 #222222 #888888 #292D2E   #222222
+client.urgent           #BF616A #BF616A #EFEFEF #BF616A   #BF616A
+client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
+
+client.background       #FFFFFF
 
 
+# TrackPad / Touchpad 
 input type:touchpad {
-    tap enabled
-    natural_scroll enabled
+  tap enabled
+  natural_scroll enabled
 }
 
-bindsym $mod+d exec MOZ_ENABLE_WAYLAND=1  wofi --show=drun
-bindsym $mod+Shift+d exec MOZ_ENABLE_WAYLAND=1  wofi --show=run
+# Keyboard Layout
+input "type:keyboard" {
+  xkb_layout us
+  xkb_variant workman
+  xkb_options caps:escape
+}
 
-#No Border
+# Browser
+bindsym $mod+b exec MOZ_ENABLE_WAYLAND=1 librewolf 
+bindsym $mod+Shift+b exec MOZ_ENABLE_WAYLAND=1 librewolf -P Hawk
+bindsym $mod+Ctrl+b exec chromium --enable-features=UseOzonePlatform --ozone-platform=wayland 
+
+# No Border
 default_border none
 
-#Browser
-bindsym $mod+b exec MOZ_ENABLE_WAYLAND=1 firefox
-bindsym $mod+Shift+b exec MOZ_ENABLE_WAYLAND=1 firefox -P default-release
-bindsym $mod+Ctrl+b exec chromium
-
-bindsym $mod+Shift+s exec grimshot copy area
-bindsym $mod+Ctrl+s exec grimshot save area
+# Wofi
+bindsym $mod+Shift+d exec wofi --show=run
 
 #Volume 
 bindsym XF86AudioRaiseVolume exec  amixer set Master 2%+
 bindsym XF86AudioLowerVolume exec  amixer set Master 2%-
 bindsym XF86AudioMute exec  amixer set Master toggle
 
-# Enable Numloc On Boot
-input * xkb_numlock enable
-
 # Media Control
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+
+# ScreenShot
+bindsym $mod+Shift+s exec grimshot copy area
+bindsym $mod+Ctrl+s exec grimshot save area
 
 include /etc/sway/config.d/*

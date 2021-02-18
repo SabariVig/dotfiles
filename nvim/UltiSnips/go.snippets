@@ -1,0 +1,15 @@
+snippet er "error" b
+if err != nil {
+  log.Printf("${1:error} %s",err)
+}
+endsnippet
+
+snippet ew "Error Log Warning" b
+if err != nil {
+  log.Warn("${1:error} \n%s",err)
+}
+endsnippet
+
+snippet lp "Log Something" b
+log.Printf($1)
+endsnippet

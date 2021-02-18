@@ -13,6 +13,8 @@ return require('packer').startup(function()
   use { 'tpope/vim-fugitive' }
   use { 'tpope/vim-commentary' }
   use { 'kyazdani42/nvim-tree.lua' }
+  use { 'farmergreg/vim-lastplace' }
+  use {'SirVer/ultisnips'}
 
   -- LSP 
   use { 'neovim/nvim-lspconfig' }
