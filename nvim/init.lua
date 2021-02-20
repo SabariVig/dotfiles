@@ -39,3 +39,4 @@ require('config.ntree')
 require('lsp')
 require('config.completion')
 
+require('config.vimspector')

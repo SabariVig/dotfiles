@@ -30,7 +30,7 @@ utils.map('v','Y','y$')
 -- Window Navigation
 utils.map('n','<Leader>y','<cmd>wincmd h<CR>')
 utils.map('n','<Leader>n','<cmd>wincmd j<CR>')
-utils.map('n','<Leader>ee','<cmd>wincmd l<CR>')
+utils.map('n','<Leader>e','<cmd>wincmd k<CR>')
 utils.map('n','<Leader>o','<cmd>wincmd l<CR>')
 
 -- Terminal Navigation
@@ -43,5 +43,5 @@ utils.map('n','<Leader> ','<cmd>e #<CR>')
 utils.map('n','<esc><esc>','<cmd>w<CR>')
 
 -- Save and quit
-utils.map('n','<Leader><esc><esc>','<cmd>wq<CR>')
+utils.map('n','<Leader><esc><esc>','<cmd>w|bd<CR>')
 

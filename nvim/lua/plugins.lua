@@ -20,6 +20,8 @@ return require('packer').startup(function()
   use { 'neovim/nvim-lspconfig' }
   use { 'nvim-lua/completion-nvim' }
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use { 'puremourning/vimspector' }
+
 
 
   use {

@@ -1,15 +1,51 @@
 snippet er "error" b
 if err != nil {
-  log.Printf("${1:error} %s",err)
+	log.${1:Warnf}("Unable To ${2:Error} \n%s",err)
 }
 endsnippet
 
 snippet ew "Error Log Warning" b
 if err != nil {
-  log.Warn("${1:error} \n%s",err)
+	log.Warnf("${1:error} \n%s",err)
 }
 endsnippet
 
 snippet lp "Log Something" b
-log.Printf($1)
+log.Printf("${1:log}")
 endsnippet
+
+snippet ew "Error Log Warning" b
+if err != nil {
+	log.Warn("${1:error} \n%s",err)
+}
+endsnippet
+
+snippet struct "Struct declaration" b
+type ${1:Struct} struct {
+	${0:${VISUAL}}
+}
+endsnippet
+
+snippet if "If statement" b
+if ${1:condition}${1/(.+)/ /}{
+	${0:${VISUAL}}
+}
+endsnippet
+
+snippet func "Function" b
+func ${1:name}(${2:params})${3/(.+)/ /}${3:type} {
+	${0:${VISUAL}}
+}
+endsnippet
+
+snippet funch "HTTP handler" b
+func ${1:handler}(${2:w} http.ResponseWriter, ${3:r} *http.Request) {
+	${0:${VISUAL}}
+}
+endsnippet
+
+snippet json "JSON field"
+\`json:"${1:displayName}"\`
+endsnippet
+
+# vim:ft=snippets:
