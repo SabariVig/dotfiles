@@ -4,9 +4,13 @@ SETUVAR --export EDITOR:nvim
 SETUVAR --export GO111MODULE:on
 SETUVAR --export GOBIN:/srv/go/bin
 SETUVAR --export --path GOPATH:/srv/go
+SETUVAR --export TF_PLUGIN_CACHE_DIR:/home/hawk/\x2eterraform\x2ed/plugin\x2dcache
 SETUVAR --export XDG_CONFIG:/home/hawk/dotfiles/
 SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr_SS:sudo\x20systemctl
+SETUVAR _fish_abbr_a:ansible
+SETUVAR _fish_abbr_ad:ansible\x2ddoc
+SETUVAR _fish_abbr_ap:ansible\x2dplaybook\x20\x2di\x20
 SETUVAR _fish_abbr_cat:bat
 SETUVAR _fish_abbr_d:docker
 SETUVAR _fish_abbr_dp:docker\x20ps\x20\x2da
@@ -17,20 +21,31 @@ SETUVAR _fish_abbr_g:git
 SETUVAR _fish_abbr_ga:git\x20add\x20\x2du
 SETUVAR _fish_abbr_gb:git\x20branch
 SETUVAR _fish_abbr_gc:git\x20commit
-SETUVAR _fish_abbr_gd:git\x20diff\x20\x2d\x2dname\x2donly\x20\x2d\x2ddiff\x2dfilter\x3dd\x20\x7c\x20xargs\x20bat\x20\x2d\x2ddiff
+SETUVAR _fish_abbr_gd:git\x20diff
 SETUVAR _fish_abbr_gdd:git\x20diff\x20HEAD
 SETUVAR _fish_abbr_gg:git\x20checkout
 SETUVAR _fish_abbr_gl:git\x20logs
 SETUVAR _fish_abbr_gp:git\x20push
 SETUVAR _fish_abbr_gpl:git\x20pull
+SETUVAR _fish_abbr_gr:git\x20restore\x20\x2d\x2dstaged
 SETUVAR _fish_abbr_gs:git\x20status
 SETUVAR _fish_abbr_gt:git\x20log\x20\x2d\x2dgraph\x20\x2d\x2doneline\x20\x2d\x2dall
 SETUVAR _fish_abbr_k:kubernetes
+SETUVAR _fish_abbr_kga:kubernetes\x20get\x20all
+SETUVAR _fish_abbr_kgd:kubernetes\x20get\x20deploy
+SETUVAR _fish_abbr_kgp:kubernetes\x20get\x20po
+SETUVAR _fish_abbr_ksv:kubernetes\x20get\x20svc
 SETUVAR _fish_abbr_l:ls
+SETUVAR _fish_abbr_lxl:lxc\x20list
 SETUVAR _fish_abbr_mkdir:mkdir\x20\x2dp\x20
 SETUVAR _fish_abbr_p:sudo\x20pacman\x20\x2dSyu
 SETUVAR _fish_abbr_rmd:rm\x20\x2drf
 SETUVAR _fish_abbr_se:export\x20\x28cat\x20\x2eenv\x20\x7cxargs\x20\x2dL\x201\x29
+SETUVAR _fish_abbr_tf:terraform
+SETUVAR _fish_abbr_tfa:terraform\x20apply
+SETUVAR _fish_abbr_tff:terraform\x20fmt
+SETUVAR _fish_abbr_tfi:terraform\x20init
+SETUVAR _fish_abbr_tfp:terraform\x20plan
 SETUVAR _fish_abbr_vim:nvim
 SETUVAR export:GOPATH\x1e/srv/go\x1eGOPATH\x3d/srv/go
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
