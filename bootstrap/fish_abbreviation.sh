@@ -17,8 +17,11 @@ abbr -Ua gr "git restore --staged"
 
 
 # System
-abbr -Ua p "sudo pacman -S"
+abbr -Ua p "sudo pacman -Syu"
 abbr -Ua SS "sudo systemctl"
+
+# LXC/LXD 
+abbr -Ua lxl "lxc list"
 
 # Docker
 abbr -Ua d "docker"
@@ -30,20 +33,27 @@ abbr -Ua dri "docker rmi (docker images -aq)"
 
 # Kubernetes
 abbr -Ua k "kubernetes"
+abbr -Ua kga "kubernetes get all"
+abbr -Ua kgd "kubernetes get deploy"
+abbr -Ua kgp "kubernetes get po"
+abbr -Ua ksv "kubernetes get svc"
 
 # Ansible 
-abbr -Ua a "ansilbe"
-abbr -Ua ad "ansilbe-doc"
-abbr -Ua ap "ansilbe-playbook -i "
+abbr -Ua a "ansible"
+abbr -Ua ad "ansible-doc"
+abbr -Ua ap "ansible-playbook -i "
 
 # Terraform 
 abbr -Ua tf "terraform"
-abbr -Ua tfp "terraform plan"
+abbr -Ua tfi "terraform init"
 abbr -Ua tff "terraform fmt"
+abbr -Ua tfp "terraform plan"
+abbr -Ua tfa "terraform apply"
 
 
 # Misc 
 abbr -Ua se "export (cat .env |xargs -L 1)"
 abbr -Ua vim "nvim"
 abbr -Ua rmd "rm -rf"
+
 

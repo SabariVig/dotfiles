@@ -5,7 +5,7 @@
 [push]
 	default = current
 [commit]
-	gpgSign = true
+	; gpgSign = true
 [core]
     editor = nvim
 	excludesFile = ~/.config/globalignore

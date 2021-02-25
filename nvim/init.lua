@@ -40,3 +40,6 @@ require('lsp')
 require('config.completion')
 
 require('config.vimspector')
+
+-- vim.cmd([[set undodir=/home/hawk/.vimhistory]])
+-- vim.cmd([[set undofile]])
