@@ -53,12 +53,25 @@ end
 -- Use a loop to conveniently both setup defined servers 
 -- and map buffer local keybindings when the language server attaches
 
+
 local servers = { "gopls", "rust_analyzer", "tsserver", "jedi_language_server", "sqls" }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup { on_attach = on_attach }
 end
 
+
+
 fn.sign_define("LspDiagnosticsSignError", { text = "●", numhl = "LspDiagnosticsDefaultError" })
 fn.sign_define("LspDiagnosticsSignWarning", { text = "▲", numhl = "LspDiagnosticsDefaultWarning" })
 fn.sign_define("LspDiagnosticsSignInformation", { text = "⯁", numhl = "LspDiagnosticsDefaultInformation" }) 
 fn.sign_define("LspDiagnosticsSignHint", { text = "‣", numhl = "LspDiagnosticsDefaultHint" })
+
+local lspconfig = require'lspconfig'
+lspconfig.terraformls.setup{
+  root_dir = lspconfig.util.root_pattern('.git');
+}
+
+local lspconfig = require'lspconfig'
+lspconfig.yamlls.setup{
+  root_dir = lspconfig.util.root_pattern('.git');
+}

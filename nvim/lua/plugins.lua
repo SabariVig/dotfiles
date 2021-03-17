@@ -22,7 +22,9 @@ return require('packer').startup(function()
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use { 'puremourning/vimspector' }
 
-
+-- HTML 
+  use { 'mattn/emmet-vim' }
+  use { 'hashivim/vim-terraform' }
 
   use {
   'nvim-telescope/telescope.nvim',

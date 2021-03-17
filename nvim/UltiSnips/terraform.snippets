@@ -1,0 +1,19 @@
+snippet resource "Resources" b
+resource "${1}" "${2}" {
+	${3}
+}
+endsnippet
+
+
+
+snippet provider "providre" b
+provider "${1:aws}"  {
+	${3:region} = ${4:eu-west-1}
+}
+endsnippet
+
+snippet pro "providre" b
+provider  {
+
+}
+endsnippet
