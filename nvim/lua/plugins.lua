@@ -18,13 +18,19 @@ return require('packer').startup(function()
 
   -- LSP 
   use { 'neovim/nvim-lspconfig' }
+  -- use { 'hrsh7th/nvim-compe' }
   use { 'nvim-lua/completion-nvim' }
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use { 'puremourning/vimspector' }
 
+
+-- Color
+  use { 'norcalli/nvim-colorizer.lua' }
+
 -- HTML 
   use { 'mattn/emmet-vim' }
   use { 'hashivim/vim-terraform' }
+  use { 'styled-components/vim-styled-components', branch = 'main' }
 
   use {
   'nvim-telescope/telescope.nvim',

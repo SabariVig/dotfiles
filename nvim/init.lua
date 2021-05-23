@@ -31,13 +31,14 @@ require('config.statusline')
 require( 'config.fugitive' )
 require('config.treesitter')
 require('config.telescope')
+require('config.colorizer')
 
 -- Nvim Tree
 require('config.ntree')
-
 -- LSP
 require('lsp')
 require('config.completion')
+-- require('config.compe')
 
 require('config.vimspector')
 
