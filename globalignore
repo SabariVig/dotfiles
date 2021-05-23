@@ -7,7 +7,6 @@
 *.log
 *.logs
 *.key
-*.gpg
 *.pub
 *.cert
 *.env
