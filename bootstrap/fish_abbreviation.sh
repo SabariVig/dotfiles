@@ -14,6 +14,8 @@ abbr -Ua gg "git checkout"
 abbr -Ua gdd "git diff HEAD"
 abbr -Ua gt "git log --graph --oneline --all"
 abbr -Ua gr "git restore --staged"
+abbr -Ua grt "git restore"
+abbr -Ua gr "cd (git rev-parse --show-toplevel)"
 
 
 # System
@@ -27,11 +29,17 @@ abbr -Ua lxl "lxc list"
 abbr -Ua d "docker"
 abbr -Ua dp "docker ps -a"
 abbr -Ua ds "sudo systemctl start docker"
-
 abbr -Ua dra "docker rm (docker ps -aq)"
 abbr -Ua dri "docker rmi (docker images -aq)"
+abbr -Ua dst "docker stop (docker ps -aq)"
+
+# Docker Compose
+abbr -Ua dc "docker-compose"
+abbr -Ua dcp "docker-compose up -d"
+abbr -Ua dcb "docker-compose up --build -d"
 
 # Kubernetes
+<<<<<<< HEAD
 abbr -Ua k "kubernetes"
 abbr -Ua kga "kubernetes get all"
 abbr -Ua kgd "kubernetes get deploy"
@@ -57,7 +65,7 @@ abbr -Ua tgp "terragrunt plan"
 abbr -Ua tga "terragrunt apply"
 
 # Misc 
-abbr -Ua se "export (cat .env |xargs -L 1)"
+abbr -Ua xe "export (cat .env |xargs -L 1)"
 abbr -Ua vim "nvim"
 abbr -Ua rmd "rm -rf"
 
