@@ -32,7 +32,7 @@ abbr -Ua dst "docker stop (docker ps -aq)"
 # Docker Compose
 abbr -Ua dc "docker-compose"
 abbr -Ua dcp "docker-compose up -d"
-abbr -Ua dcb "docker-compose --build up -d"
+abbr -Ua dcb "docker-compose up --build -d"
 
 # Kubernetes
 abbr -Ua k "kubectl"
