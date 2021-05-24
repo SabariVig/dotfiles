@@ -1,8 +1,8 @@
-#!/bin/fish
+#!/usr/bin/env fish
 
 # Git
 abbr -Ua g "git"
-abbr -Ua gp "git push"
+abbr -Ua gp "git push origin"
 abbr -Ua gl "git logs"
 abbr -Ua gd "git diff"
 abbr -Ua gpl "git pull"
@@ -50,6 +50,11 @@ abbr -Ua tff "terraform fmt"
 abbr -Ua tfp "terraform plan"
 abbr -Ua tfa "terraform apply"
 
+#Terragrunt
+abbr -Ua tg "terragrunt "
+abbr -Ua tgi "terragrunt init"
+abbr -Ua tgp "terragrunt plan"
+abbr -Ua tga "terragrunt apply"
 
 # Misc 
 abbr -Ua se "export (cat .env |xargs -L 1)"
