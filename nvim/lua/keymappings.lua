@@ -45,3 +45,9 @@ utils.map('n','<esc><esc>','<cmd>w<CR>')
 -- Save and quit
 utils.map('n','<Leader><esc><esc>','<cmd>w|bd<CR>')
 
+-- Bracket Pair
+utils.map('i', '{', '{}<esc>i')
+utils.map('i', '(', '()<esc>i')
+utils.map('i', '[', '[]<esc>i')
+utils.map('i', '\'', '\'\'<esc>i')
+utils.map('i', '\"', '\"\"<esc>i')

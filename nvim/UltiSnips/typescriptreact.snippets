@@ -2,3 +2,48 @@ snippet rsc "React Function" b
 const ${1:name}(${2:params})${3/(.+)/ /}${3:type} {
     ${0:${VISUAL}}
 }
+endsnippet
+
+snippet rse "Styled Component Export" b
+import styled from 'styled-components'
+
+const ${1:`!v expand('%:t:r')`} = styled.${2:div}\`
+	$3
+\`
+
+export default $1
+endsnippet
+
+
+
+snippet rss "Styled Component" b
+${1:export} const ${2:`!v expand('%:t:r')`Style} = styled.${3:div}\`$4\`
+endsnippet
+
+snippet rsce "Styled Component Export 'Styled' " b
+import styled from 'styled-components'
+
+const ${1:`!v expand('%:t:r')`Style} = styled.${2:div}\`$3\`
+
+export default $1
+endsnippet
+
+
+snippet the "Styled Component Theme" i
+  ${({ theme }) => theme.$1 };
+endsnippet
+
+snippet ato "Atom Recoil" b
+import { atom } from 'recoil'
+const ${1:`!v expand('%:t:r')`Store} = atom({
+   key: "${2:`!v expand('%:t:r')`}",
+   default: ${3: hello},
+  }
+)
+export default $1
+endsnippet
+
+snippet epd "Export Default " b
+
+export default ${1:`!v expand('%:t:r')`} 
+endsnippet

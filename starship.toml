@@ -6,13 +6,21 @@ error_symbol = "[➜](bold red)"
 vicmd_symbol = "[⇷](bold green)"
 
 [git_status]
-conflicted_count.enabled = true
-stashed_count.enabled = true
-modified_count.enabled = true
-staged_count.enabled = true 
+conflicted.enabled = true
+stashed.enabled = true
+modified.enabled = true
+staged.enabled = true 
 
 [aws]
 disabled = true
 
 [package]
 disabled = true
+
+[status]
+symbol = ""
+disabled = false
+
+#[kubernetes]
+#disabled=false
+

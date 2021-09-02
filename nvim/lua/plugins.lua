@@ -7,7 +7,7 @@ return require('packer').startup(function()
   use { 'sainnhe/gruvbox-material' }
 
 
-  use { 'jiangmiao/auto-pairs' }
+  -- use { 'jiangmiao/auto-pairs' }
   use { 'machakann/vim-sandwich' }
 
   use { 'tpope/vim-fugitive' }
@@ -18,25 +18,23 @@ return require('packer').startup(function()
 
   -- LSP 
   use { 'neovim/nvim-lspconfig' }
-  -- use { 'hrsh7th/nvim-compe' }
-  use { 'nvim-lua/completion-nvim' }
+  -- use { 'nvim-lua/completion-nvim' }
+  use { 'ms-jpq/coq_nvim', branch = 'coq'} -- main one
+  use { 'ms-jpq/coq.artifacts', branch= 'artifacts'} -- 9000+ Snippets
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use { 'puremourning/vimspector' }
 
-
--- Color
-  use { 'norcalli/nvim-colorizer.lua' }
-
 -- HTML 
   use { 'mattn/emmet-vim' }
+  use { 'dsznajder/vscode-es7-javascript-react-snippets',   run = 'yarn install --frozen-lockfile && yarn compile' }
   use { 'hashivim/vim-terraform' }
-  use { 'styled-components/vim-styled-components', branch = 'main' }
 
   use {
   'nvim-telescope/telescope.nvim',
   requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
 }
-  
+ use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' } 
+ require('telescope').load_extension('fzf')
   -- Status Line
   use { 
       'glepnir/galaxyline.nvim', branch = 'main',
