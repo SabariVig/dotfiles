@@ -29,7 +29,7 @@ utils.opt('o','swapfile', false)
 
 utils.opt('o', 'clipboard','unnamedplus')
 utils.opt('o','undodir', '/home/hawk/.vimhistory/')
-
+-- vim.o.completeopt = "menuone,noselect"
 
 -- Window API
 utils.opt('w','number',true)
