@@ -50,3 +50,5 @@ font:
   size: 13
   normal: 
     family: 'iosevka'
+key_bindings:
+  - { key: N,        mods: Control|Shift,    action: SpawnNewInstance    }
