@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# time="$(date +"%I:%M %p")"
+time="$(date +"%H:%M")"
+date="$(date +"%d %b %Y")"
+
+printf "%s\n%s\n" "$time" "$date"

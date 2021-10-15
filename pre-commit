@@ -1,3 +1,0 @@
-#!/bin/bash
-
-ln /home/hawk/.config/coc/ultisnips/* /home/hawk/.config/snippets

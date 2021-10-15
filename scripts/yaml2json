@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+function yaml2json {
+  python3 -c 'import sys, yaml, json; from yaml import CLoader as Loader; print(json.dumps(yaml.load(sys.stdin.read(),Loader=Loader)))'
+}
+yaml2json

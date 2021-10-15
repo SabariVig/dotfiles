@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+
+
+if curl  -sLf https://raw.githubusercontent.com/github/gitignore/master/${1^}.gitignore -o .gitignore; then
+    echo -e "\e[1;32mSuccesfully Updated .gitignore file for ${1} language \e[0m"
+else
+    echo -e "\e[1;31mUnable to find .gitignore for the language ${1}\e[0m"
+fi
+
