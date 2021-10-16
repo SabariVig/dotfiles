@@ -37,7 +37,6 @@ require('config.ntree')
 
 -- LSP
 require('lsp')
--- require('config.completion')
 
 require('config.vimspector')
 require('config.coq')

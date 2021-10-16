@@ -36,7 +36,8 @@ utils.opt('w','number',true)
 utils.opt('w','wrap', false)
 utils.opt('w','relativenumber',true)
 
-
+-- coq.vim
+vim.g.coq_settings = { auto_start = 'shut-up' }
 
 
 -- vim.cmd([[set colorcolumn=80]])

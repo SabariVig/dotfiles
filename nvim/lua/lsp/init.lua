@@ -1,4 +1,5 @@
 local nvim_lsp = require('lspconfig')
+local configs = require'lspconfig/configs'  
 local coq = require "coq" 
 local fn = vim.fn
 local on_attach = function(client, bufnr)
@@ -54,11 +55,10 @@ end
 -- and map buffer local keybindings when the language server attaches
 
 
-local servers = { "gopls", "rust_analyzer", "tsserver", "jedi_language_server", "sqls" }
+local servers = { "gopls", "rust_analyzer", "tsserver", "jedi_language_server", "sqls" , "svelte"}
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup(coq.lsp_ensure_capabilities{ on_attach = on_attach })
 end
-
 
 
 fn.sign_define("LspDiagnosticsSignError", { text = "●", numhl = "LspDiagnosticsDefaultError" })
@@ -110,3 +110,20 @@ lspconfig.efm.setup {
     }
 }
 }
+
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+if not nvim_lsp.emmet_ls then    
+  configs.emmet_ls = {    
+    default_config = {    
+      cmd = {'emmet-ls', '--stdio'};
+      filetypes = {'html', 'css', 'svelte'};
+      root_dir = function(fname)    
+        return vim.loop.cwd()
+      end;    
+      settings = {};    
+    };    
+  }    
+end    
+lspconfig.emmet_ls.setup{ capabilities = capabilities; }
