@@ -20,7 +20,7 @@ function h --description "Search command history. Replace the command line with 
     )
 
     if test $status -eq 0
-        set command_selected (string split --max 1 "  " " " $command_with_ts)[2]
+        set command_selected (string split --max 1 "  " " " $command_with_ts)[2] 
         commandline --replace -- $command_selected
     end
 
